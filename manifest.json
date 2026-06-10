@@ -1,0 +1,22 @@
+{
+  "name": "Multiverse Books",
+  "short_name": "Multiverse",
+  "description": "Premium Library for PDF Books, Notes & Formulas.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0c111d",
+  "theme_color": "#0c111d",
+  "icons": [
+    {
+      "src": "https://i.postimg.cc/cJdGqYHG/IMG-20260524-WA0004.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "https://i.postimg.cc/cJdGqYHG/IMG-20260524-WA0004.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}
+
