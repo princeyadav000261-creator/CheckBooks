@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MULTIVERSE BOOKS</title>
     
+    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+    <script>
+      window.OneSignalDeferred = window.OneSignalDeferred || [];
+      OneSignalDeferred.push(async function(OneSignal) {
+        await OneSignal.init({
+          appId: "ccbc91dd-3c80-40a5-8e0a-e85980463644",
+        });
+      });
+    </script>
+    
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#0c111d">
     <link rel="apple-touch-icon" href="https://i.postimg.cc/cJdGqYHG/IMG-20260524-WA0004.jpg">
@@ -548,20 +558,6 @@
 
         const app = initializeApp(firebaseConfig);
         const db = getFirestore(app);
-
-        // 🔥 NOTIFICATION PERMISSION LOGIC 🔥
-        function requestNotificationPermission() {
-            if ("Notification" in window) {
-                Notification.requestPermission().then(permission => {
-                    if (permission === "granted") {
-                        console.log("Notification permission granted.");
-                    } else {
-                        console.log("Notification permission denied.");
-                    }
-                });
-            }
-        }
-        setTimeout(requestNotificationPermission, 5000);
 
         window.booksData = [];
         let loadedCount = 0; 
